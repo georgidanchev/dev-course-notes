@@ -4,7 +4,7 @@ I pulled out the notes from the big front-end development courses I've completed
 
 Completed courses (oldest to newest):
 
-- JS30 - 30 projects in 30 days - WES BOS
-- ES6 For everyone - WES BOS
+- JS30 - 30 projects in 30 days - Wes Bos
+- ES6 For everyone - Wes Bos
 - Modern JavaScript From The Beginning - Brad Traversy
 - Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)

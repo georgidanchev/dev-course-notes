@@ -1,0 +1,49 @@
+/* 
+  This is example of the new css variables. This is not
+  sass or less, or precomplier that we are used to using.
+*/
+
+/* 
+  ":root" pseudo-class is used to select the 
+  root element of the document/dom-tree.
+*/
+
+:root {
+  /* the actual variables. "--" is the 
+    acutal syntax for variables.*/
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+img {
+  /* var() is how the variables are utilized */
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur))
+}
+
+span {
+  color: var(--base);
+}
+
+/*
+  The misc styles, they are unrelated to our CSS variables
+*/
+
+body {
+  text-align: center;
+  background: #193549;
+  color: white;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+.controls {
+  margin-bottom: 50px;
+}
+
+input {
+  width: 100px;
+}
