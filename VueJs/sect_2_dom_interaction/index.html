@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+
+<body>
+  <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+
+  <div id="app">
+    <h2>Click Logic</h2>
+    <button @click="increase(2, $event)">Click Me x2</button>
+    <button @click="counter++">Click Me x1</button>
+    <p>{{ counter * 2 }}</p>
+    <p>{{ counter * 2  > 10 ? 'Greater than 10' : 'Smaller than 10'}}</p>
+
+    <hr />
+    <h2>Stop propagation</h2>
+    <p v-on:mousemove="updateCoords">
+      Coordinates: {{ x }} / {{ y }}
+      - <span v-on:mousemove.stop="">DEAD SPOT</span>
+    </p>
+    <input type="text" v-on:keyup.enter.space="alertMe">
+
+    <hr>
+    <h2>Two way data-binding</h2>
+    <input type="text" v-model="name">
+    <p>{{ name }}</p>
+
+    <hr>
+    <h2>Reacting and Computed</h2>
+    <button @click="counter++">Increase</button>
+    <button @click="counter--">Decrease</button>
+    <button @click="secondCounter++">Increase2</button>
+    <p>Counter: {{ counter }} | {{ secondCounter }}</p>
+    <p>{{ result() }} | {{ output }}</p>
+  </div>
+
+  <hr>
+
+  <div id="app2">
+    <div class="demo" @click="attachRed = !attachRed" :class="divClasses">
+    </div>
+    <div class="demo" :class="{blue: attachRed}"></div>
+    <div class="demo" :style="{backgroundColor: color}"></div>
+    <div class="demo" :style="myStyle"></div>
+    <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+    <input type="text" v-model="color">
+    <input type="text" v-model="width">
+    <hr>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
