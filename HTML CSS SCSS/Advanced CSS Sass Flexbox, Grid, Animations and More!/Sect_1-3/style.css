@@ -3,25 +3,38 @@
 	--text-color: #777;
 }
 
-* {
-	margin: 0;
-	padding: 0;
+*,
+*::after,
+*::before {
 	/* prevents border and paddings from
   being not added the total width */
-	box-sizing: border-box;
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	/* Setting a percentage allows us to change the default font size while maintaining the browser/user font-size customizability. */
+	font-size: 62.5%;
+	/* default is 16px, so 16/100=0.625 */
 }
 
 body {
+	box-sizing: border-box;
 	color: var(--text-color);
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	line-height: 1.7;
-	font-size: 1.7;
-	padding: 30px;
+	padding: 3rem;
 }
 
 .header {
-	background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), hsla(160, 64%, 43%, 0.8)), url('../img/hero.jpg');
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(126, 213, 111, 0.8),
+			hsla(160, 64%, 43%, 0.8)
+		),
+		url('../img/hero.jpg');
 
 	height: 95vh;
 	background-size: cover;
@@ -38,12 +51,12 @@ body {
 
 .logo-box {
 	position: absolute;
-	left: 40px;
-	top: 40px;
+	left: 4rem;
+	top: 4rem;
 }
 
 .logo {
-	height: 35px;
+	height: 3.5rem;
 }
 
 .text-box {
@@ -55,7 +68,7 @@ body {
 }
 
 .heading-primary {
-	margin-bottom: 60px;
+	margin-bottom: 6rem;
 	color: #fff;
 	text-transform: uppercase;
 	backface-visibility: hidden;
@@ -73,9 +86,9 @@ body {
 }
 
 .heading-primary-main {
-	letter-spacing: 35px;
+	letter-spacing: 3.5rem;
 	font-weight: 400;
-	font-size: 60px;
+	font-size: 6rem;
 	/* animation short hand property */
 	animation: moveInLeft 1s ease-out;
 
@@ -92,9 +105,9 @@ body {
 }
 
 .heading-primary-sub {
-	letter-spacing: 17.4px;
+	letter-spacing: 1.75rem;
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 2rem;
 
 	animation: moveInRight 1s ease-out;
 }
@@ -102,11 +115,11 @@ body {
 @keyframes moveInLeft {
 	0% {
 		opacity: 0;
-		transform: translateX(-100px);
+		transform: translateX(-10rem);
 	}
 
 	80% {
-		transform: translateX(10px);
+		transform: translateX(1rem);
 	}
 
 	100% {
@@ -118,11 +131,11 @@ body {
 @keyframes moveInRight {
 	0% {
 		opacity: 0;
-		transform: translateX(100px);
+		transform: translateX(10rem);
 	}
 
 	80% {
-		transform: translateX(-10px);
+		transform: translateX(-1rem);
 	}
 
 	100% {
@@ -134,7 +147,7 @@ body {
 @keyframes moveInBottom {
 	0% {
 		opacity: 0;
-		transform: translateY(30px);
+		transform: translateY(3rem);
 	}
 
 	100% {
@@ -147,22 +160,23 @@ body {
 .btn:visited {
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 15px 40px;
+	padding: 1.5rem 4rem;
 
 	display: inline-block;
 	transition: transform 200ms, box-shadow 200ms;
-	border-radius: 50px;
+	border-radius: 5rem;
 	position: relative;
+	font-size: 1.6rem;
 }
 
 .btn:hover {
 	transform: translateY(-3px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
 	transform: translateY(0);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -173,7 +187,7 @@ body {
 .btn::after {
 	content: '';
 	display: inline-block;
-	border-radius: 100px;
+	border-radius: 10rem;
 	height: 100%;
 	width: 100%;
 
