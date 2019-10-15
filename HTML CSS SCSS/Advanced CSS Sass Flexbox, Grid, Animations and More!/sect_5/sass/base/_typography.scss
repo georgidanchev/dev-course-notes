@@ -1,0 +1,42 @@
+body {
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	padding: 3rem;
+}
+
+.heading-primary {
+	margin-bottom: 6rem;
+	color: $color-white;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+
+	/* backface-visibility
+	hides the back of the element,
+	so when transforming the back-face
+	won't become visible and make the
+	animation shake slightly!
+	*/
+
+	&--main,
+	&--sub {
+		display: block;
+	}
+
+	&--main {
+		letter-spacing: 3.5rem;
+		font-weight: 400;
+		font-size: 6rem;
+		// animation short hand property
+		animation: moveInLeft 1s ease-out;
+	}
+
+	&--sub {
+		letter-spacing: 1.75rem;
+		font-weight: 700;
+		font-size: 2rem;
+		// animation short hand property
+		animation: moveInRight 1s ease-out;
+	}
+}
