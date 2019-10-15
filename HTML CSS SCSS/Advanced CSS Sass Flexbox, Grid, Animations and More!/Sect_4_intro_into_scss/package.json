@@ -1,0 +1,18 @@
+{
+	"name": "IntroIntoSCSS",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"sass": "node-sass -w style.scss style.css",
+		"dev": "concurrently \"live-server\" \"node-sass -w style.scss style.css\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"concurrently": "^5.0.0",
+		"live-server": "^1.2.1",
+		"node-sass": "^4.12.0"
+	}
+}
