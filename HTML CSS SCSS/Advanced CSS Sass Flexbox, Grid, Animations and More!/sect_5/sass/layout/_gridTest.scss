@@ -1,6 +1,6 @@
 .row {
+	// background-color: #eee;
 	max-width: $grid-width;
-	background-color: #eee;
 	margin: 0 auto;
 
 	// Reverses the selector.
@@ -16,11 +16,11 @@
 	// that starts with the following
 	[class^='col-'] {
 		// ^ starts with, * contains, $ ends with
-		background-color: orangered;
-		text-transform: uppercase;
-		color: $color-white;
-		text-align: center;
-		font-weight: 600;
+		// background-color: orangered;
+		// text-transform: uppercase;
+		// color: $color-white;
+		// text-align: center;
+		// font-weight: 600;
 		float: left;
 
 		font-size: 18px;
