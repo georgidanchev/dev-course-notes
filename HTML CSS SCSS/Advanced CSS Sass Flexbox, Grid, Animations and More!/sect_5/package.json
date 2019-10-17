@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"sass": "node-sass ./sass/main.scss style.css",
-		"dev": "concurrently \"live-server\" \"node-sass -w sass/main.scss style.css\""
+		"sass": "node-sass ./sass/main.scss css/style.css",
+		"dev": "concurrently \"live-server\" \"node-sass -w sass/main.scss css/style.css\""
 	},
 	"keywords": [],
 	"author": "",
