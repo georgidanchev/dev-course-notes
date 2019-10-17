@@ -1,2 +1,188 @@
 .card {
+	// Functionality
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	position: relative;
+	$card-height: 52rem;
+	height: $card-height;
+
+	&__side {
+		font-size: 2rem;
+		height: $card-height;
+		width: 100%;
+
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+		transition: transform 500ms ease;
+		backface-visibility: hidden;
+		border-radius: 3px;
+
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		&--front {
+			background-color: $color-white;
+		}
+
+		&--back {
+			transform: rotateY(180deg);
+
+			&--1 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-secondary-light,
+					$color-secondary-dark
+				);
+			}
+
+			&--2 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-primary-light,
+					$color-primary-dark
+				);
+			}
+
+			&--3 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-secondary-light,
+					$color-secondary-dark
+				);
+			}
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(180deg);
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(360deg);
+	}
+
+	// Front side styling
+	&__picture {
+		background-size: cover;
+		background-blend-mode: screen;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		height: 23rem;
+
+		border-top-right-radius: 3px;
+		border-top-left-radius: 3px;
+
+		&--1 {
+			background-image: linear-gradient(
+					to right bottom,
+					$color-secondary-light,
+					$color-secondary-dark
+				),
+				url('../img/nat-5.jpg');
+		}
+
+		&--2 {
+			background-image: linear-gradient(
+					to right bottom,
+					$color-primary-light,
+					$color-primary-dark
+				),
+				url('../img/nat-6.jpg');
+		}
+
+		&--3 {
+			background-image: linear-gradient(
+					to right bottom,
+					$color-tertiary-light,
+					$color-tertiary-dark
+				),
+				url('../img/nat-7.jpg');
+		}
+	}
+
+	&__heading {
+		font-size: 2.8rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: $color-white;
+
+		position: absolute;
+		text-align: right;
+		right: 2rem;
+		top: 12rem;
+		width: 75%;
+	}
+
+	&__heading-span {
+		padding: 1rem 1.5rem;
+		-webkit-box-decoration-break: clone;
+
+		&--1 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-secondary-light, 0.85),
+				rgba($color-secondary-dark, 0.85)
+			);
+		}
+
+		&--2 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-primary-light, 0.85),
+				rgba($color-primary-dark, 0.85)
+			);
+		}
+
+		&--3 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-tertiary-light, 0.85),
+				rgba($color-tertiary-dark, 0.85)
+			);
+		}
+	}
+
+	&__details {
+		padding: 3rem;
+		ul {
+			list-style: none;
+			margin: 0 auto;
+			width: 80%;
+
+			li {
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+				&:not(:last-child) {
+					border-bottom: 1px solid $color-gray-light-2;
+				}
+			}
+		}
+	}
+
+	&__cta {
+		transform: translate(-50%, -50%);
+		text-align: center;
+		position: absolute;
+		width: 90%;
+		left: 50%;
+		top: 50%;
+	}
+
+	&__price-box {
+		text-align: center;
+		color: $color-white;
+		margin-bottom: 8rem;
+	}
+
+	&__price-only {
+		text-transform: uppercase;
+		font-size: 1.4rem;
+	}
+
+	&__price-value {
+		font-weight: 300;
+		font-size: 6rem;
+	}
 }
