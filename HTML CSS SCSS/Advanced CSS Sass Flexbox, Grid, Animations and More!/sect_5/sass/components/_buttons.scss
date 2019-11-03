@@ -91,4 +91,9 @@
 		box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
 		transform: translateY(0);
 	}
+
+	&::after {
+		margin-left: 5px;
+		content: '→';
+	}
 }
