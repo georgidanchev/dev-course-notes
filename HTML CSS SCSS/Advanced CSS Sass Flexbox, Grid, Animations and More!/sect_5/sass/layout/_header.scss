@@ -24,7 +24,7 @@
 	}
 
 	&__text-box {
-		@include absolute-center;
+		@include absCenter;
 		text-align: center;
 	}
 }

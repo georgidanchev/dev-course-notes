@@ -56,7 +56,7 @@
 	}
 
 	&__list {
-		@include absolute-center;
+		@include absCenter;
 		text-align: center;
 		list-style: none;
 		min-width: 345px;

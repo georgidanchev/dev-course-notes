@@ -83,7 +83,7 @@
 			width: 1.25rem;
 
 			border-radius: 50%;
-			@include absolute-center;
+			@include absCenter;
 			background-color: $color-primary;
 			opacity: 0;
 			transform: opacity 200ms linear;
