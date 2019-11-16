@@ -1,0 +1,71 @@
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	padding: 3rem;
+}
+
+.heading-primary {
+	margin-bottom: 6rem;
+	color: $color-white;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+
+	/* backface-visibility
+	hides the back of the element,
+	so when transforming the back-face
+	won't become visible and make the
+	animation shake slightly!
+	*/
+
+	&--main,
+	&--sub {
+		display: block;
+	}
+
+	&--main {
+		letter-spacing: 3.5rem;
+		font-weight: 400;
+		font-size: 6rem;
+		// animation short hand property
+		animation: moveInLeft 1s ease-out;
+	}
+
+	&--sub {
+		letter-spacing: 1.75rem;
+		font-weight: 700;
+		font-size: 2rem;
+		// animation short hand property
+		animation: moveInRight 1s ease-out;
+	}
+}
+
+.heading-secondary {
+	@extend %text-gradient;
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: 3.5rem;
+	font-weight: 700;
+
+	transition: transform 200ms linear, text-shadow 200ms linear;
+	letter-spacing: 0.2rem;
+
+	&:hover {
+		transform: skewY(2deg) skewX(15deg) scale(1.1);
+		text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+	}
+}
+
+.heading-tertiary {
+	font-weight: 700;
+	font-size: $default-font-size;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}

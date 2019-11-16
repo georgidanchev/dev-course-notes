@@ -1,0 +1,30 @@
+.header {
+	@include background-image-gradient('../img/hero.jpg');
+	background-position: top;
+	position: relative;
+	height: 95vh;
+
+	// this is awesome!
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	/* ==============================
+		===    Polygon Generator    ===
+		https://bennettfeely.com/clippy/
+	================================= */
+
+	&__logo-box {
+		position: absolute;
+		left: 4rem;
+		top: 4rem;
+	}
+
+	&__logo {
+		height: 3.5rem;
+	}
+
+	&__text-box {
+		@include absCenter;
+		text-align: center;
+	}
+}
