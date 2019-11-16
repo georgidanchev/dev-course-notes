@@ -14,7 +14,8 @@
 }
 
 html {
-	/* setting a percentage allows us to change the default font size while maintaining the browser/user font-size customizability. */
+	/* setting a percentage allows us to change the default REM size to 10px while maintaining the
+  browser/user font-size customizability. */
 	font-size: 62.5%;
 	/* default is 16px, so 16/100=0.625 */
 }

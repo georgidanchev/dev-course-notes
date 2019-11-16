@@ -6,6 +6,13 @@
 	}
 }
 
+@mixin absolute-center {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
 @mixin background-image-gradient($src) {
 	background-image: linear-gradient(
 			to right bottom,

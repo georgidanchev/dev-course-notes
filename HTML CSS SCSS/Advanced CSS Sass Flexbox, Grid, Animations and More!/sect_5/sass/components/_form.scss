@@ -83,11 +83,7 @@
 			width: 1.25rem;
 
 			border-radius: 50%;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-
-			transform: translate(-50%, -50%);
+			@include absolute-center;
 			background-color: $color-primary;
 			opacity: 0;
 			transform: opacity 200ms linear;
