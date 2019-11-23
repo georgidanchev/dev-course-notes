@@ -4,15 +4,26 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"sass": "node-sass ./sass/main.scss css/style.css",
-		"dev": "concurrently \"live-server\" \"node-sass -w sass/main.scss css/style.css\""
+		"dev": "concurrently \"live-server\" \"node-sass -w sass/main.scss css/style.css\"",
+		"start": "npm-run-all --parallel devServer watch:sass",
+		"devServer": "live-server",
+		"watch:sass": "node-sass ./sass/main.scss css/style.css",
+		"compile:sass": "node-sass ./sass/main.scss css/style.comp.css",
+		"concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
+		"compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed",
+		"build:css": "npm-run-all sass:comp sass:concat sass:prefix sass:compress"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
+		"autoprefixer": "^9.7.2",
+		"concat": "^1.0.3",
 		"concurrently": "^5.0.0",
 		"live-server": "^1.2.1",
-		"node-sass": "^4.12.0"
+		"node-sass": "^4.12.0",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^6.1.3"
 	}
 }

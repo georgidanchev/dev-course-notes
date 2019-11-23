@@ -12,11 +12,12 @@
 
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 		transition: transform 500ms ease;
+		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		border-radius: 3px;
 
-		overflow: hidden;
 		position: absolute;
+		overflow: hidden;
 		left: 0;
 		top: 0;
 
@@ -185,7 +186,8 @@
 		font-size: 6rem;
 	}
 
-	@include respond(tab-port) {
+	// none mobile and non-hover touch devices
+	@media only screen and (max-width: 56.25em), only screen and (hover: none) {
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 		background-color: $color-white;
 		border-radius: 3px;

@@ -12,6 +12,13 @@
 	visibility: hidden;
 	opacity: 0;
 
+	@supports (-webkit-backdrop-filter: blur(10px)) or
+		(backdrop-filter: blur(10px)) {
+		background-color: rgba($color-black, 0.3);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
+
 	&__content {
 		@include absCenter;
 		box-shadow: 0 2rem 4rem rgba($color-black, 0.2);

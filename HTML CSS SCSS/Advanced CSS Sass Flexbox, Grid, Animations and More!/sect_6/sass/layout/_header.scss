@@ -1,17 +1,27 @@
 .header {
-	@include background-image-gradient('../img/hero.jpg');
+	height: 80vh;
+	@include background-image-gradient('../img/hero-small.jpg');
+	// set full image on higher DPI screens and 600px+ or 2000px+.
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+		only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+		only screen and (min-width: 125em) {
+		@include background-image-gradient('../img/hero.jpg');
+	}
+
 	background-position: top;
 	position: relative;
-	height: 95vh;
 
-	// this is awesome!
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-
-	/* ==============================
-		===    Polygon Generator    ===
+	/* ===============================
+	  ===    Polygon Generator    ====
 		https://bennettfeely.com/clippy/
 	================================= */
+
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		// this is awesome!
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		height: 95vh;
+	}
 
 	@include respond(phone) {
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
