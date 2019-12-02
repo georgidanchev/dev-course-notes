@@ -1,0 +1,58 @@
+.container {
+	background-color: #eee;
+	margin: 60px auto 0;
+	width: 1000px;
+
+	/* at first sign, it does nothing by itself */
+	display: grid;
+
+	/* 2 rows of 150px each */
+	grid-template-rows: repeat(2, 150px);
+
+	/* 3 columns of 150 each */
+	grid-template-columns: repeat(2, 150px);
+
+	/* 3 columns - 1 with 50% and two with 1fr */
+	grid-template-columns: 50% 1fr 1fr;
+
+	/* 3 columns with  1fr each*/
+	grid-template-columns: repeat(3, 1fr);
+
+	/* the gap between grid rows */
+	grid-row-gap: 30px;
+
+	/* the gap between grid columns */
+	grid-column-gap: 40px;
+
+	/* shorthand property column and row gaps */
+	/* grid-gap: 30px; */
+}
+
+.item {
+	font-family: sans-serif;
+	background-color: orangered;
+	color: white;
+
+	font-size: 30px;
+	padding: 20px;
+}
+
+.item--2 {
+	background-color: yellowgreen;
+}
+
+.item--3 {
+	background-color: blueviolet;
+}
+
+.item--4 {
+	background-color: palevioletred;
+}
+
+.item--5 {
+	background-color: royalblue;
+}
+
+.item--6 {
+	background-color: goldenrod;
+}
