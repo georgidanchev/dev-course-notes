@@ -1,0 +1,51 @@
+.container {
+	background-color: #eee;
+	margin: 60px auto 0;
+	width: 1000px;
+
+	/* at first sign, it does nothing by itself */
+	display: grid;
+
+	/* 2 rows of 150px each */
+	grid-template-rows: 150px 150px;
+
+	/* 3 columns of 150px each */
+	grid-template-columns: 150px 150px 150px;
+
+	/* the gap between grid rows */
+	grid-row-gap: 20px;
+
+	/* the gap between grid columns */
+	grid-column-gap: 30px;
+
+	/* shorthand property column and row gaps */
+	grid-gap: 30px;
+}
+
+.item {
+	padding: 20px;
+	font-size: 30px;
+	font-family: sans-serif;
+	color: white;
+	background-color: orangered;
+}
+
+.item--2 {
+	background-color: yellowgreen;
+}
+
+.item--3 {
+	background-color: blueviolet;
+}
+
+.item--4 {
+	background-color: palevioletred;
+}
+
+.item--5 {
+	background-color: royalblue;
+}
+
+.item--6 {
+	background-color: goldenrod;
+}
