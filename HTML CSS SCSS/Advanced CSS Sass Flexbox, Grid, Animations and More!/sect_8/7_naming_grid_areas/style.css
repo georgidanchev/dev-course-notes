@@ -1,0 +1,62 @@
+/* method 2 - grid areas */
+.items-wrap {
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr) 200px;
+	margin: 30px auto;
+	grid-gap: 15px;
+	height: 700px;
+	width: 900px;
+
+	/* this is brilliant! */
+	/* . stands for empty cell */
+	grid-template-areas:
+		'. head head .'
+		'box1 box2 box3 side'
+		'main main main side'
+		'main main main side'
+		'foot foot foot foot';
+}
+
+/* styles for all grid cells */
+.item {
+	background-color: orangered;
+	text-transform: capitalize;
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 2rem;
+	padding: 20px;
+	color: #fff;
+}
+
+/* style for header box */
+.item--1 {
+	grid-area: head;
+}
+
+.item--2 {
+	grid-area: box1;
+}
+
+.item--3 {
+	grid-area: box2;
+}
+
+.item--4 {
+	grid-area: box3;
+}
+
+/* styles for sidebar */
+.item--5 {
+	grid-area: side;
+}
+
+/* styles for main content */
+.item--6 {
+	grid-area: main;
+}
+
+/* style for footer */
+.item--7 {
+	grid-area: foot;
+}
