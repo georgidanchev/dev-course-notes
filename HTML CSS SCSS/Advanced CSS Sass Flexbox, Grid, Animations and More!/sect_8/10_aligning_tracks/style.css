@@ -1,0 +1,53 @@
+.container {
+	width: 1000px;
+	margin: 30px auto 0;
+	background-color: #ddd;
+
+	display: grid;
+	grid-gap: 30px;
+
+	grid-auto-rows: 80px;
+
+	/* dense - don't allow any grid holes */
+	grid-auto-flow: row dense;
+	grid-auto-columns: 0.5fr;
+
+	/* align grid tracks to grid containers */
+	grid-template-columns: repeat(2, 200px);
+	grid-template-rows: repeat(2, 100px);
+	height: 1000px;
+
+	/* OMG! THIS IA AMAZING!!! */
+
+	/* aligns the all grid cells
+	 within the grid container. */
+
+	/* just like the properties of flex-box,
+	but without the flex-box negatives */
+
+	justify-content: center;
+	align-content: center;
+}
+
+.container .item {
+	background-color: orangered;
+	font-family: sans-serif;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+}
+
+.container .item--4 {
+	background-color: crimson;
+	grid-row: 2 / span 3;
+}
+
+.container .item--6 {
+	background-color: lightcoral;
+	grid-row: 2 / span 2;
+}
+
+.container .item--7 {
+	background-color: palevioletred;
+	grid-column: 1 / -1;
+}
