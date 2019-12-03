@@ -1,0 +1,67 @@
+.container {
+	width: 1000px;
+	margin: 30px auto 0;
+	background-color: #ddd;
+	display: grid;
+
+	/* implicit grid - 2 rows, 150px each */
+	grid-template-rows: repeat(2, 150px);
+
+	/* min-content -> fits content with
+  the minimal amount of space possible */
+	grid-template-rows: repeat(2, min-content);
+
+	/* max-content -> fits content while avoiding
+  without any line breaks when possible */
+	grid-template-columns: max-content 1fr 1fr min-content;
+
+	/* rows should be at least 150px high
+   and higher and if it needs to be. */
+	grid-template-rows: repeat(2, minmax(150px, min-content));
+
+	/* overwrite for final tut part */
+	width: 90%;
+
+	/* first columns should be between 200px
+  and 300px at all times, 3 other at 1fr */
+	grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
+}
+
+.container .item {
+	background-color: orangered;
+	font-family: sans-serif;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+}
+
+.container .item--1 {
+	background-color: orangered;
+}
+
+.container .item--2 {
+	background-color: yellowgreen;
+}
+.container .item--3 {
+	background-color: blueviolet;
+}
+
+.container .item--4 {
+	background-color: palevioletred;
+}
+
+.container .item--5 {
+	background-color: royalblue;
+}
+
+.container .item--6 {
+	background-color: goldenrod;
+}
+
+.container .item--7 {
+	background-color: crimson;
+}
+
+.container .item--8 {
+	background-color: darkslategray;
+}
