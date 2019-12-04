@@ -1,4 +1,32 @@
 .features {
-	background-color: $color-grey-dark-2;
+	margin: 15rem 0;
+	// how to align to parent grid container
 	grid-column: center-start / center-end;
+
+	display: grid;
+	// align grid container to start the top
+	align-items: start;
+	// responsive with auto-fit, to auto add column
+	// minmax -> width should be always between:
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 6rem;
+}
+
+.feature {
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	grid-column-gap: 3.5rem;
+	grid-row-gap: 1.5rem;
+
+	&__icon {
+		transform: translateY(-1rem);
+		fill: $color-primary;
+		grid-row: 1 / span 2;
+		height: 4.5rem;
+		width: 4.5rem;
+	}
+
+	&__text {
+		font-size: 1.7rem;
+	}
 }
