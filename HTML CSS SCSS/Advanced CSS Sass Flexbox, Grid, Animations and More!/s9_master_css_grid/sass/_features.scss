@@ -3,16 +3,27 @@
 	// how to align to parent grid container
 	grid-column: center-start / center-end;
 
-	display: grid;
-	// align grid container to start the top
-	align-items: start;
-	// responsive with auto-fit, to auto add column
-	// minmax -> width should be always between:
-	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-	grid-gap: 6rem;
+	@supports (display: grid) {
+		display: grid;
+		// align grid container to start the top
+		align-items: start;
+		// responsive with auto-fit, to auto add column
+		// minmax -> width should be always between:
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		grid-gap: 6rem;
+	}
 }
 
 .feature {
+	width: auto;
+	margin-bottom: 0;
+
+	@supports not (display: grid) {
+		float: left;
+		width: 33.3333%;
+		margin-bottom: 6rem;
+	}
+
 	display: grid;
 	grid-template-columns: min-content 1fr;
 	grid-column-gap: 3.5rem;
