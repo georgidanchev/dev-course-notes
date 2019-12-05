@@ -1,4 +1,4 @@
-# Development Courses Notes
+# Development Course Notes
 
 ## Completed (old to recent)
 
