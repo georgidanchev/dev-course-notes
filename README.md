@@ -23,3 +23,4 @@
 - 9hrs - [Node.js, Express & MongoDB Dev to Deployment](https://www.udemy.com/course/draft/1358300/)
 - 34.5hrs - [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)
 - 16hrs - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
+- 5.5hrs - [Electron From Scratch: Build Desktop Apps With JavaScript](https://www.udemy.com/course/electron-from-scratch/)
