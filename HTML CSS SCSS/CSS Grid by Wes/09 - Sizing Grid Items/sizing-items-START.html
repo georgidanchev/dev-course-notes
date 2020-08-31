@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Sizing Grid Items!</title>
+</head>
+
+<body>
+  <div class="container">
+    <item class="item item1">1</item>
+    <item class="item item2">2</item>
+    <item class="item item3">3</item>
+    <item class="item item4">4</item>
+    <item class="item item5">5</item>
+    <item class="item item6">6</item>
+    <item class="item item7">7</item>
+    <item class="item item8">8</item>
+    <item class="item item9">9</item>
+    <item class="item item10">10</item>
+    <item class="item item11">11</item>
+    <item class="item item12">12</item>
+    <item class="item item13">13</item>
+    <item class="item item14">14</item>
+    <item class="item item15">15</item>
+    <item class="item item16">16</item>
+    <item class="item item17">17</item>
+    <item class="item item18">18</item>
+    <item class="item item19">19</item>
+    <item class="item item20">20</item>
+    <item class="item item21">21</item>
+    <item class="item item22">22</item>
+    <item class="item item23">23</item>
+    <item class="item item24">24</item>
+    <item class="item item25">25</item>
+    <item class="item item26">26</item>
+    <item class="item item27">27</item>
+    <item class="item item28">28</item>
+    <item class="item item29">29</item>
+    <item class="item item30">30</item>
+  </div>
+
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .item9 {
+      background: mistyrose;
+      /* takes two spots in the grid */
+      grid-column: span 2;
+      /* element to take two rows */
+      grid-row: span 2;
+    }
+  </style>
+</body>
+
+</html>
