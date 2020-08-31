@@ -8,6 +8,7 @@
 - 21.5hrs - [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
 - 4hrs - [Learn Figma - UI/UX Design Essential Training](https://www.udemy.com/course/learn-figma/)
 - 28hrs - [Advanced CSS and Sass: Flexbox, Grid, Animations and More!](https://www.udemy.com/course/advanced-css-and-sass/)
+- 4hrs - [CSS Grid](https://cssgrid.io/)
 
 ## Awaiting Completion (unordered)
 
