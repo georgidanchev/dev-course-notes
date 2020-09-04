@@ -13,6 +13,6 @@
 	"devDependencies": {
 		"concurrently": "^5.0.0",
 		"live-server": "^1.2.1",
-		"node-sass": "^4.12.0"
+		"node-sass": "^4.13.1"
 	}
 }
