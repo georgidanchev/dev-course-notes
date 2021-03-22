@@ -1,0 +1,67 @@
+body {
+  background-color: #ddd;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.request {
+  background-color: rgb(161, 161, 161);
+  border-radius: 5px;
+  height: 200px;
+  width: 100%;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.request__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.output {
+  background-color: red;
+  min-height: 50px;
+  padding: 20px;
+  display: block;
+}
+
+.btn {
+  background-color: blueviolet;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px 10px;
+
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.alert {
+  color: white;
+  padding: 20px;
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
+}
+
+.center {
+  text-align: center;
+}

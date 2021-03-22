@@ -1,0 +1,21 @@
+{
+  "name": "15_npm_spotlight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.1.0",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.24.0",
+    "request": "^2.88.0",
+    "slug": "^1.1.0",
+    "uuid": "^3.3.2"
+  }
+}

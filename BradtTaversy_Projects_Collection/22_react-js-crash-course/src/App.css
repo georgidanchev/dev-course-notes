@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+.container {
+	padding: 0 1rem;
+}
+
+.btn {
+	display: inline-block;
+	border: none;
+	background: #555555;
+	color: #ffffff;
+	padding: 7px 20px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #666666;
+}

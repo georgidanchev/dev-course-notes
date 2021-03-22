@@ -1,0 +1,4 @@
+{
+  "jwtSecret": "mySecret",
+  "apiKey": "a1s2das3d2"
+}

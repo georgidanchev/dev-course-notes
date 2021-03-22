@@ -1,0 +1,25 @@
+{
+	"name": "21_apex_legends_tracker_app",
+	"version": "1.0.0",
+	"description": "Track stats for Apex Legends",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server",
+		"server": "nodemon server",
+		"client": "npm run serve --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"keywords": [],
+	"author": "Georgi Danchev",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^4.1.2",
+		"dotenv": "^8.1.0",
+		"express": "^4.17.1",
+		"morgan": "^1.9.1",
+		"node-fetch": "^2.6.0"
+	},
+	"devDependencies": {
+		"nodemon": "^1.19.3"
+	}
+}

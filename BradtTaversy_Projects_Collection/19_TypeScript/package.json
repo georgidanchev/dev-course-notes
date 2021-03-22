@@ -1,0 +1,15 @@
+{
+	"name": "typeScriptTest",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"ts1": "tsc types.ts -w",
+		"ts2": "tsc functions.ts -w",
+		"ts3": "tsc interfaces.ts -w",
+		"ts4": "tsc classes.ts -w"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
