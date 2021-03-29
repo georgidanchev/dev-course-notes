@@ -9,6 +9,7 @@
 - 4hrs - [Learn Figma - UI/UX Design Essential Training](https://www.udemy.com/course/learn-figma/)
 - 28hrs - [Advanced CSS and Sass: Flexbox, Grid, Animations and More!](https://www.udemy.com/course/advanced-css-and-sass/)
 - 4hrs - [CSS Grid](https://cssgrid.io/)
+- 16hrs - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
 
 ## Awaiting Completion (unordered)
 
@@ -24,7 +25,6 @@
 - 34hrs - [The Advanced Web Developer Bootcamp](https://www.udemy.com/course/the-advanced-web-developer-bootcamp/)
 - 9hrs - [Node.js, Express & MongoDB Dev to Deployment](https://www.udemy.com/course/draft/1358300/)
 - 34.5hrs - [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)
-- 16hrs - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
 - 5.5hrs - [Electron From Scratch: Build Desktop Apps With JavaScript](https://www.udemy.com/course/electron-from-scratch/)
 
 
@@ -153,4 +153,8 @@ View the tutorial **[here](https://youtu.be/a6XIMIKmj9k)**.
 
 ## 30_blog_cards, 31_basic_logic, 32_ads_manager
 
-View the tutorial **[here](https://www.youtube.com/watch?v=6EajwhCNLfc)**.
+View the tutorial **[here](https://youtu.be/6EajwhCNLfc)**.
+
+### 33_react_crash_course_2021
+
+View the tutorial **[here](https://youtu.be/w7ejDZ8SWv8)**.
