@@ -1,11 +1,10 @@
 import React from "react";
 
-const Alert = ({ showAlert, alertContent }) => {
+const Alert = ({ alert }) => {
   return (
-    showAlert === true && (
-      <div className={`alert alert-${alertContent.type}`}>
-        <i class="fas fa-info-circle"></i>{" "}
-        {alertContent.msg}
+    alert !== null && (
+      <div className={`alert alert-${alert.type}`}>
+        <i className="fas fa-info-circle"></i> {alert.msg}
       </div>
     )
   );
