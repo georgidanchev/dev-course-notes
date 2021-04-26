@@ -1,18 +1,18 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
-import ContactContext from "../../context/contact/contactContext";
+import React, { useContext } from "react"
+import PropTypes from "prop-types"
+import ContactContext from "../../context/contact/contactContext"
 
 const ContactItem = ({ contact }) => {
-  const contactContext = useContext(ContactContext);
+  const contactContext = useContext(ContactContext)
 
-  const { deleteContact, setCurrent, clearCurrent } = contactContext;
+  const { deleteContact, setCurrent, clearCurrent } = contactContext
 
-  const { id, name, email, phone, type } = contact;
+  const { _id, name, email, phone, type } = contact
 
   const onDelete = () => {
-    deleteContact(id);
-    clearCurrent();
-  };
+    deleteContact(_id)
+    clearCurrent()
+  }
 
   return (
     <div className="card bg-light">
@@ -43,11 +43,11 @@ const ContactItem = ({ contact }) => {
         </button>
       </p>
     </div>
-  );
-};
+  )
+}
 
 ContactItem.prototype = {
   contact: PropTypes.object.isRequired,
-};
+}
 
-export default ContactItem;
+export default ContactItem

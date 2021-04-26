@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export const About = () => {
   return (
@@ -9,7 +9,7 @@ export const About = () => {
         <strong>Version: </strong> 1.0.0
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
