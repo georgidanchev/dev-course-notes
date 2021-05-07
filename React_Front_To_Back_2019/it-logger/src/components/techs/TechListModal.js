@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Preloader from "../layout/Preloader";
+// import Preloader from "../layout/Preloader";
 import TechItem from "./TechItem";
 
 const TechListModal = () => {
