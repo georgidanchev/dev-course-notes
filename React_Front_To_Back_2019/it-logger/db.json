@@ -8,18 +8,18 @@
       "id": 1
     },
     {
-      "message": "Hard drive failed in workstation 002",
-      "attention": true,
-      "tech": "Sata Wilson",
-      "data": "2021-05-07T07:20:56.926Z",
-      "id": 2
-    },
-    {
       "message": "1122 wireless down",
       "attention": true,
       "tech": "Sata Wilson",
       "data": "2021-05-07T07:21:16.526Z",
       "id": 3
+    },
+    {
+      "id": 4,
+      "message": "Fixed hard drive on workstation 002",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2021-05-08T10:27:38.603Z"
     }
   ],
   "techs": [

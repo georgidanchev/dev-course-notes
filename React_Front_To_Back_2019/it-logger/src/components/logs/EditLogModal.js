@@ -1,19 +1,44 @@
-import React, { useState } from "react";
-import M from 'materialize-css/dist/js/materialize.min.js'
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import M from "materialize-css/dist/js/materialize.min.js";
+import { updateLog } from "../../actions/logActions";
 
-const AddLogModal = () => {
+const EditLogModal = ({ current, updateLog }) => {
   const [message, setMessage] = useState("");
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState("");
 
+  useEffect(() => {
+    if (current) {
+      setMessage(current.message);
+      setAttention(current.attention);
+      setTech(current.tech);
+    }
+  }, [current]);
+
   const onSubmit = (e) => {
     e.preventDefault();
-    if(message === '' || tech === '') {
-      M.toast({ html: 'Please enter a message and tech' });
+    if (message === "" || tech === "") {
+      M.toast({ html: "Please enter a message and tech" });
     } else {
-      console.log('click ', message, tech, attention);
+      const updLog = {
+        id: current.id,
+        message,
+        attention,
+        tech,
+        date: new Date(),
+      };
+
+      updateLog(updLog);
+      M.toast({ html: `Log updated by ${tech}` });
+
+      // Clear all fields
+      setMessage("");
+      setTech("");
+      setAttention(false);
     }
-  }
+  };
 
   return (
     <div id="edit-log-modal" className="modal" style={modalStyle}>
@@ -43,7 +68,13 @@ const AddLogModal = () => {
           <div className="input-field">
             <p>
               <label>
-                <input type="checkbox" className="filled-in" checked={attention} value={attention} onChange={e => setAttention(!attention)} />
+                <input
+                  type="checkbox"
+                  className="filled-in"
+                  checked={attention}
+                  value={attention}
+                  onChange={(e) => setAttention(!attention)}
+                />
                 <span>Needs Attention</span>
               </label>
             </p>
@@ -51,7 +82,9 @@ const AddLogModal = () => {
         </div>
       </div>
       <div className="modal-footer">
-        <a href="#!" onClick={onSubmit} className="modal-close waves-effect blue waves-green btn">Enter</a>
+        <a href="#!" onClick={onSubmit} className="modal-close waves-effect blue waves-green btn">
+          Enter
+        </a>
       </div>
     </div>
   );
@@ -62,4 +95,13 @@ const modalStyle = {
   height: "75%",
 };
 
-export default AddLogModal;
+EditLogModal.prototype = {
+  current: PropTypes.object,
+  updateLog: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  current: state.log.current,
+});
+
+export default connect(mapStateToProps, { updateLog })(EditLogModal);
