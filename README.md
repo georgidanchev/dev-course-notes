@@ -10,11 +10,11 @@
 - 28hrs - [Advanced CSS and Sass: Flexbox, Grid, Animations and More!](https://www.udemy.com/course/advanced-css-and-sass/)
 - 4hrs - [CSS Grid](https://cssgrid.io/)
 - 16hrs - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
-
+- 14hrs - [React Front To Back 2019](https://www.udemy.com/course/modern-react-front-to-back/)
 
 ## Currently studying
 
-- 14hrs - [React Front To Back 2019](https://www.udemy.com/course/modern-react-front-to-back/)
+- 72Hrs - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 
 ## Awaiting Completion (unordered)
 
