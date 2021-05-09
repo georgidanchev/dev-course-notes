@@ -14,11 +14,10 @@
 
 ## Currently studying
 
-- 72Hrs - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
+- 47.5Hrs - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 
 ## Awaiting Completion (unordered)
 
-- 72Hrs - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 - 22hrs - [Understanding TypeScript - 2020 Edition](https://www.udemy.com/course/understanding-typescript/)
 - 18hrs - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
 - 11.5hrs - [Bootstrap 4 From Scratch With 5 Projects](https://www.udemy.com/course/bootstrap-4-from-scratch-with-5-projects/)
