@@ -133,7 +133,6 @@ View the tutorial **[here](https://youtu.be/FiGmAI5e91M)**.
 
 View the tutorial **[here](https://youtu.be/aAxt0Z7IXIo)**.
 
-
 ## 25_presentation_slide_website
 
 View the tutorial **[here](https://youtu.be/uE1m21Umn0s)**.
@@ -161,3 +160,7 @@ View the tutorial **[here](https://youtu.be/6EajwhCNLfc)**.
 ### 33_react_crash_course_2021
 
 View the tutorial **[here](https://youtu.be/w7ejDZ8SWv8)**.
+
+## 34_react_redux
+
+View the tutorial **[here](https://youtu.be/93p3LxR9xfM)**.
