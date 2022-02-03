@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Ubuntu" sans-serif;
+  font-family: "Ubuntu", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;

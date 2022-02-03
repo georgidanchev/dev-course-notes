@@ -11,7 +11,7 @@
 
 body {
   background-color: #f6f7fb;
-  font-family: "Multi" sans-serif;
+  font-family: "Multi", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
