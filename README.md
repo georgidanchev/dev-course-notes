@@ -11,6 +11,7 @@
 - 4hrs - [CSS Grid](https://cssgrid.io/)
 - 16hrs - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
 - 14hrs - [React Front To Back 2019](https://www.udemy.com/course/modern-react-front-to-back/)
+- 18hrs - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
 
 ## Currently studying
 
@@ -19,7 +20,6 @@
 ## Awaiting Completion (unordered)
 
 - 22hrs - [Understanding TypeScript - 2020 Edition](https://www.udemy.com/course/understanding-typescript/)
-- 18hrs - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
 - 11.5hrs - [Bootstrap 4 From Scratch With 5 Projects](https://www.udemy.com/course/bootstrap-4-from-scratch-with-5-projects/)
 - 21hrs - [Modern HTML & CSS From The Beginning (Including Sass)](https://www.udemy.com/course/modern-html-css-from-the-beginning/)
 - 12hrs - [MERN Stack Front To Back: Full Stack React, Redux & Node.js](https://www.udemy.com/course/mern-stack-front-to-back/)
