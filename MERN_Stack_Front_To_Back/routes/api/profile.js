@@ -4,7 +4,7 @@ const Profile = require("../../models/Profile")
 const router = express.Router()
 const User = require("../../models/User")
 
-const { check, validationResult } = require("express-validator/check")
+const { check, validationResult } = require("express-validator")
 
 // @route   GET api/profile/me
 // @desc    Get current user profile
@@ -71,7 +71,6 @@ router.post(
     if (instagram) profileFields.social.instagram = instagram
     if (linkedin) profileFields.social.linkedin = linkedin
 
-
     try {
       // Look for the profile by the user
       let profile = await Profile.findOne({ user: req.user.id })
@@ -92,10 +91,42 @@ router.post(
       console.error(err.message)
       res.status(500).send("Server Error")
     }
-
-    console.log(profileFields.skills)
-    res.send("Profile Created")
   }
 )
+
+// @route   GET api/profile
+// @desc    Get all profiles
+// @access  Public
+router.get("/", async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate("user", ["name", "avatar"])
+    res.json(profiles)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send("Server Error")
+  }
+})
+
+// @route   GET api/profile/user/:user_id
+// @desc    Get profile by id
+// @access  Public
+router.get("/user/:user_id", async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ user: req.params.user_id }).populate("user", ["name", "avatar"])
+
+    if (!profile) return res.status(400).json({ msg: "Profile not found" })
+
+    res.json(profile)
+  } catch (err) {
+    console.error(err.message)
+
+    // If we have object id error, the error should not be a server error
+    if(err.kind == "ObjectId") {
+      return res.status(400).json({ msg: "Profile not found" })
+    }
+
+    res.status(500).send("Server Error")
+  }
+})
 
 module.exports = router
