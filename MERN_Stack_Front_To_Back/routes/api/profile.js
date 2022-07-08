@@ -228,7 +228,7 @@ router.put(
     [
       check("school", "School is required").not().isEmpty(),
       check("degree", "Degree is required").not().isEmpty(),
-      check("fieldofstudy", "Field of study is required").not().isEmpty(),
+      check("fieldOfStudy", "Field of study is required").not().isEmpty(),
       check("from", "From date is required").not().isEmpty(),
     ],
   ],
@@ -239,12 +239,12 @@ router.put(
       return res.status(400).json({ errors: errors.array() })
     }
 
-    const { school, degree, fieldofstudy, from, to, current, description } = req.body
+    const { school, degree, fieldOfStudy, from, to, current, description } = req.body
 
     const newEdu = {
       school,
       degree,
-      fieldofstudy,
+      fieldOfStudy,
       from,
       to,
       current,
