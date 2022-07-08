@@ -45,7 +45,7 @@ router.post(
     }
 
     // Pull everything from the request body
-    const { company, website, location, bio, status, githubusername, skills, youtube, facebook, twitter, instagram, linkedin } = req.body
+    const { company, website, location, bio, status, githubUsername, skills, youtube, facebook, twitter, instagram, linkedin } = req.body
 
     // Build profile fields object for DB insertion
     const profileFields = {}
@@ -57,7 +57,7 @@ router.post(
     if (location) profileFields.location = location
     if (bio) profileFields.bio = bio
     if (status) profileFields.status = status
-    if (githubusername) profileFields.githubusername = githubusername
+    if (githubUsername) profileFields.githubUsername = githubUsername
 
     if (skills) {
       profileFields.skills = skills.split(",").map((skill) => skill.trim())
