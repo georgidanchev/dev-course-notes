@@ -1,4 +1,4 @@
-const { SET_ALERT, REMOVE_ALERT } = require("../../actions/types")
+const { SET_ALERT, REMOVE_ALERT } = require("../actions/types")
 
 const initialState = []
 
