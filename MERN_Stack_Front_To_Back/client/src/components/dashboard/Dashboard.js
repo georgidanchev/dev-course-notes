@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import PropTypes from "prop-types"
 import React, { Fragment, useEffect } from "react"
 import Spinner from "../layout/Spinner"
+import DashboardActions from "./DashboardActions"
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
   useEffect(() => {
@@ -16,11 +17,15 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
     <Fragment>
       <section className="container">
         <h1 class="large text-primary">Dashboard</h1>
+
         <p class="lead">
           <i className="fas fa-user"></i> Welcome {user && user.name}
         </p>
+
         {profile !== null ? (
-          <Fragment>has</Fragment>
+          <Fragment>
+            <DashboardActions />
+          </Fragment>
         ) : (
           <Fragment>
             <p>You have not setup a profile, please add some info</p>

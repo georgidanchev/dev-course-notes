@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import { Fragment, useEffect } from "react"
 import { loadUser } from "./actions/auth"
 import Alert from "./components/layout/Alert"
-import CreateProfile from "./components/profile-forms/CreateProfile"
+import ProfileForm from "./components/profile-forms/ProfileForm"
 import Dashboard from "./components/dashboard/Dashboard"
 import Landing from "./components/layout/Landing"
 import Login from "./components/auth/Login"
@@ -36,14 +36,9 @@ const App = () => {
             <Route path="/" element={<Landing />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            <Route
-              path="/dashboard"
-              element={<PrivateRoute component={Dashboard} />}
-            />
-            <Route
-              path="/create-profile"
-              element={<PrivateRoute component={CreateProfile} />}
-            />
+            <Route path="/dashboard" element={<PrivateRoute component={Dashboard} />} />
+            <Route path="/create-profile" element={<PrivateRoute component={ProfileForm} />} />
+            <Route path="edit-profile" element={<PrivateRoute component={ProfileForm} />} />
           </Routes>
         </Fragment>
       </Router>

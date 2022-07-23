@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment, useState, useEffect } from "react"
 import { Link, useMatch, useNavigate } from "react-router-dom"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { createProfile } from "../../actions/profile"
+import { createProfile, getCurrentProfile } from "../../actions/profile"
 
 const initialState = {
   company: "",
@@ -19,7 +19,7 @@ const initialState = {
   instagram: "",
 }
 
-const ProfileForm = ({ profile: { profile, loading }, createProfile, history }) => {
+const ProfileForm = ({ profile: { profile, loading }, createProfile, getCurrentProfile }) => {
   const [formData, setFormData] = useState(initialState)
 
   const {
@@ -42,6 +42,31 @@ const ProfileForm = ({ profile: { profile, loading }, createProfile, history }) 
   const navigate = useNavigate()
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false)
+
+  useEffect(() => {
+    // if there is no profile, attempt to fetch one
+    if (!profile) getCurrentProfile()
+
+    // if we finished loading and we do have a profile
+    // then build our profileData
+    if (!loading && profile) {
+      const profileData = { ...initialState }
+
+      for (const key in profile) {
+        if (key in profileData) profileData[key] = profile[key]
+      }
+
+      for (const key in profile.social) {
+        if (key in profileData) profileData[key] = profile.social[key]
+      }
+
+      // the skills may be an array from our API response
+      if (Array.isArray(profileData.skills)) profileData.skills = profileData.skills.join(", ")
+
+      // set local state with the profileData
+      setFormData(profileData)
+    }
+  }, [loading, getCurrentProfile, profile])
 
   const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value })
 
@@ -220,10 +245,11 @@ const ProfileForm = ({ profile: { profile, loading }, createProfile, history }) 
           </Fragment>
         )}
 
-        <input type="submit" className="btn btn-primary my-1" />
-        <a className="btn btn-light my-1" href="dashboard.html">
-          Go Back
-        </a>
+        <input type="submit" className="btn btn-primary my-1" value={creatingProfile ? "Submit" : "Update"} />
+
+        <Link className="btn btn-light my-1" to="/dashboard">
+          Back
+        </Link>
       </form>
     </section>
   )
@@ -231,6 +257,7 @@ const ProfileForm = ({ profile: { profile, loading }, createProfile, history }) 
 
 ProfileForm.propTypes = {
   createProfile: PropTypes.func.isRequired,
+  getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
 }
 
@@ -238,4 +265,4 @@ const mapStateToProps = (state) => ({
   profile: state.profile,
 })
 
-export default connect(mapStateToProps, { createProfile })(ProfileForm)
+export default connect(mapStateToProps, { createProfile, getCurrentProfile })(ProfileForm)
