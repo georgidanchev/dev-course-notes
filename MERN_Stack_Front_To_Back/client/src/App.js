@@ -32,17 +32,12 @@ const App = () => {
           <Navbar />
           <Alert />
           <Routes>
-            <Route exact path="/" element={<Landing />} />
-            <Route exact path="/register" element={<Register />} />
-            <Route exact path="/login" element={<Login />} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
             <Route
-              exact
               path="/dashboard"
-              element={
-                <PrivateRoute>
-                  <Dashboard/>
-                </PrivateRoute>
-              }
+              element={<PrivateRoute component={Dashboard} />}
             />
           </Routes>
         </Fragment>
