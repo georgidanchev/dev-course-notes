@@ -5,6 +5,9 @@ import PropTypes from "prop-types"
 import React, { Fragment, useEffect } from "react"
 import Spinner from "../layout/Spinner"
 import DashboardActions from "./DashboardActions"
+import Experience from "./Experience"
+import Education from "./Education"
+
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
   useEffect(() => {
@@ -16,15 +19,17 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
   ) : (
     <Fragment>
       <section className="container">
-        <h1 class="large text-primary">Dashboard</h1>
+        <h1 className="large text-primary">Dashboard</h1>
 
-        <p class="lead">
+        <p className="lead">
           <i className="fas fa-user"></i> Welcome {user && user.name}
         </p>
 
         {profile !== null ? (
           <Fragment>
             <DashboardActions />
+            <Experience experience={profile.experience} />
+            <Education education={profile.education} />
           </Fragment>
         ) : (
           <Fragment>
