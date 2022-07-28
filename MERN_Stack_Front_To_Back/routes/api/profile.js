@@ -5,6 +5,7 @@ const Profile = require("../../models/Profile")
 const request = require("request")
 const router = express.Router()
 const User = require("../../models/User")
+const Post = require("../../models/Post")
 
 const { check, validationResult } = require("express-validator")
 
@@ -136,11 +137,14 @@ router.get("/user/:user_id", async (req, res) => {
 // @access  Private
 router.delete("/", auth, async (req, res) => {
   try {
-    // @todo - remove user posts
-
+    // Remove user posts
     // Remove profile
     // Remove user
-    await Promise.all([Profile.findOneAndRemove({ user: req.user.id }), User.findOneAndRemove({ _id: req.user.id })])
+    await Promise.all([
+      Post.deleteMany({ user: req.user.id }),
+      Profile.findOneAndRemove({ user: req.user.id }),
+      User.findOneAndRemove({ _id: req.user.id })
+    ])
 
     // Response message
     res.json({ msg: "User deleted" })

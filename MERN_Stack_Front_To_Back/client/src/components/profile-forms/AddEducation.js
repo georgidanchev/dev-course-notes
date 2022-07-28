@@ -30,10 +30,13 @@ const AddEducation = ({ addEducation, history }) => {
         <i className="fas fa-code-branch"></i> Add any school or bootcamp that you have attended
       </p>
       <small>* = required field</small>
-      <form className="form" onSubmit={e => {
-        e.preventDefault()
-        addEducation(formData, navigate)
-      }}>
+      <form
+        className="form"
+        onSubmit={(e) => {
+          e.preventDefault()
+          addEducation(formData, navigate)
+        }}
+      >
         <div className="form-group">
           <input
             type="text"
@@ -79,7 +82,7 @@ const AddEducation = ({ addEducation, history }) => {
                 toggleDisabled(!toDateDisabled)
               }}
             />{" "}
-            Current
+            Current school
           </p>
         </div>
         <div className="form-group">
