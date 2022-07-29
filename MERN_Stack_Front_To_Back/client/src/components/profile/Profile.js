@@ -6,6 +6,7 @@ import React, { Fragment, useEffect } from "react"
 import ProfileTop from "./ProfileTop"
 import ProfileAbout from "./ProfileAbout"
 import ProfileExperience from "./ProfileExperience"
+import ProfileGithub from "./ProfileGithub"
 import ProfileEducation from "./ProfileEducation"
 import Spinner from "../layout/Spinner"
 
@@ -25,16 +26,20 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
           <Link to="/profiles" className="btn btn-light">
             Back To Profiles
           </Link>
+
           {auth.isAuthenticated && auth.loading === false && auth.user._id === profile.user._id && (
             <Link to="/edit-profile" className="btn btn-dark">
               Edit Profile
             </Link>
           )}
+
           <div className="profile-grid my-1">
             <div className="profile-top bg-primary p-2">
               <ProfileTop profile={profile} />
             </div>
+
             <ProfileAbout profile={profile} />
+
             <div className="profile-exp bg-white p-2">
               <h2 className="text-primary">Experience</h2>
               {profile.experience.length > 0 ? (
@@ -47,6 +52,7 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
                 <h4>No experience credentials</h4>
               )}
             </div>
+
             <div className="profile-edu bg-white p-2">
               <h2 className="text-primary">Education</h2>
               {profile.education.length > 0 ? (
@@ -59,6 +65,8 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
                 <h4>No education credentials</h4>
               )}
             </div>
+
+            {profile.githubusername && <ProfileGithub username={profile.githubusername} />}
           </div>
         </Fragment>
       )}
