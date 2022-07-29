@@ -8,7 +8,7 @@ import { getProfiles } from "../../actions/profile"
 const Profile = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles()
-  }, [])
+  }, [getProfiles])
 
   return (
     <div className="container">
@@ -17,10 +17,10 @@ const Profile = ({ getProfiles, profile: { profiles, loading } }) => {
       ) : (
         <Fragment>
           <h1 className="large text-primary">Developers</h1>
-          <p class="lead">
-            <i class="fab fa-connectdevelop"></i> Browse and connect with developers
+          <p className="lead">
+            <i className="fab fa-connectdevelop"></i> Browse and connect with developers
           </p>
-          <div class="profiles">
+          <div className="profiles">
             {profiles.length > 0 ? (
               profiles.map((profile) => <ProfileItem key={profile._id} profile={profile} />)
             ) : (
