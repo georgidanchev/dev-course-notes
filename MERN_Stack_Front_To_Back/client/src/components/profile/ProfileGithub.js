@@ -16,7 +16,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
         <Spinner />
       ) : (
         repos.map((repo) => (
-          <div key={repo._id} className="repo bg-white p-1 my-1">
+          <div key={repo.id} className="repo bg-white p-1 my-1">
             <div>
               <h4>
                 <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
@@ -27,9 +27,9 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
             </div>
             <div>
               <ul>
-                <li class="badge badge-primary">Stars: {repo.stargazers_count}</li>
-                <li class="badge badge-dark">Watchers: {repo.stargazers_count}</li>
-                <li class="badge badge-light">Forks: {repo.forks_count}</li>
+                <li className="badge badge-primary">Stars: {repo.stargazers_count}</li>
+                <li className="badge badge-dark">Watchers: {repo.stargazers_count}</li>
+                <li className="badge badge-light">Forks: {repo.forks_count}</li>
               </ul>
             </div>
           </div>
