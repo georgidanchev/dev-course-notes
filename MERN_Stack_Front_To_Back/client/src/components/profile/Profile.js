@@ -3,10 +3,12 @@ import { getProfileById } from "../../actions/profile"
 import { Link, useParams } from "react-router-dom"
 import PropTypes from "prop-types"
 import React, { Fragment, useEffect } from "react"
+import ProfileTop from "./ProfileTop"
+import ProfileAbout from "./ProfileAbout"
 import Spinner from "../layout/Spinner"
 
 const Profile = ({ getProfileById, profile: { profile, loading }, auth, match }) => {
- const { id } = useParams();
+  const { id } = useParams()
 
   useEffect(() => {
     getProfileById(id)
@@ -26,6 +28,10 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
               Edit Profile
             </Link>
           )}
+          <div className="profile-top bg-primary p-2">
+            <ProfileTop profile={profile} />
+            <ProfileAbout profile={profile} />
+          </div>
         </Fragment>
       )}
     </section>
