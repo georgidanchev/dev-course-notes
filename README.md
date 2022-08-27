@@ -16,17 +16,18 @@
 
 ## Currently studying
 
-- 47.5Hrs - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
+- 34hrs - [The Advanced Web Developer Bootcamp](https://www.udemy.com/course/the-advanced-web-developer-bootcamp/)
 
 ## Awaiting Completion (unordered)
 
+- 10.5hrs - [Mastering TypeScript - 2022 Edition](https://www.udemy.com/course/learn-typescript/learn/lecture/32837130)
 - 22hrs - [Understanding TypeScript - 2020 Edition](https://www.udemy.com/course/understanding-typescript/)
 - 11.5hrs - [Bootstrap 4 From Scratch With 5 Projects](https://www.udemy.com/course/bootstrap-4-from-scratch-with-5-projects/)
 - 21hrs - [Modern HTML & CSS From The Beginning (Including Sass)](https://www.udemy.com/course/modern-html-css-from-the-beginning/)
 - 51.5hrs - [The Complete 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - 12hrs - [Node.js API Masterclass With Express & MongoDB](https://www.udemy.com/course/nodejs-api-masterclass/)
 - 46.5hrs - [The Web Developer Bootcamp](https://www.udemy.com/course/the-web-developer-bootcamp/)
-- 34hrs - [The Advanced Web Developer Bootcamp](https://www.udemy.com/course/the-advanced-web-developer-bootcamp/)
+- 47.5Hrs - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 - 9hrs - [Node.js, Express & MongoDB Dev to Deployment](https://www.udemy.com/course/draft/1358300/)
 - 34.5hrs - [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)
 - 5.5hrs - [Electron From Scratch: Build Desktop Apps With JavaScript](https://www.udemy.com/course/electron-from-scratch/)
