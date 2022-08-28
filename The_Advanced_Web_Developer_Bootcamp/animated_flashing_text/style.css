@@ -26,4 +26,31 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
+
+  /* Animation directions
+  changes animation execution direction
+
+  animation-direction: forwards;
+  animation-direction: reverse;
+  animation-direction: alternate;
+  */
+
+  /* Animation fill modes
+  changes the style of the element before and after the animation
+
+  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
+  animation-fill-mode: both;
+  animation-fill-mode: none;
+  */
+}
+
+/* Pause animation on hover */
+.animated-text:hover {
+  animation-play-state: paused;
+}
+
+/* Resume animation on click */
+.animated-text:active {
+  animation-play-state: running;
 }
