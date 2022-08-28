@@ -2,7 +2,8 @@
 
 ## Completed (old to recent)
 
-- JS30 - [30 projects in 30 days](https://javascript30.com/)
+- 56hrs - [Team Tree Front End Web Development Track](https://teamtreehouse.com/tracks/front-end-web-development)
+- 5hrs - [30 projects in 30 days](https://javascript30.com/)
 - 7hrs - [ES6 For everyone (master package)](https://es6.io/)
 - 21.5hrs - [Modern JavaScript From The Beginning](https://www.udemy.com/course/modern-javascript-from-the-beginning/)
 - 21.5hrs - [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
