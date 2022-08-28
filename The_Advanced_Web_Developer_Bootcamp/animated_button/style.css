@@ -1,0 +1,47 @@
+:root {
+  --color-btn-primary: #fcad26;
+  --box-shadow-btn: #efa424;
+  --transition-speed: 100ms;
+}
+
+body {
+  background-color: #fcd04b;
+  font-family: Lato;
+  color: #fff;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: var(--color-btn-primary);
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 25px 80px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 6px var(--box-shadow-btn);
+  transition: top var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.btn:hover {
+  box-shadow: 0 4px var(--box-shadow-btn);
+  top: 2px;
+}
+
+.btn:active {
+  box-shadow: 0 0 var(--box-shadow-btn);
+  top: 6px;
+}
