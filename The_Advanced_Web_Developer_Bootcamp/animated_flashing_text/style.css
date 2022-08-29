@@ -20,12 +20,12 @@
 }
 
 .animated-text {
-  /* animation: rainbowText 3s liner 0s infinite; */
-  animation-name: rainbowText;
+  animation: rainbowText 3s infinite;
+  /* animation-name: rainbowText;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-delay: 0s;
+  animation-delay: 0s; */
 
   /* Animation directions
   changes animation execution direction

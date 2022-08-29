@@ -45,13 +45,17 @@
 body {
   margin: 0 0 0 0;
   background-color: #2c3e50;
-  transition: background-color 1s ease-in-out;
-  animation-name: skyAnimation;
+  transition: background-color 300ms ease-in-out;
+
+  /* animation-name: skyAnimation;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  animation-delay: 0;
+  animation-delay: 0; */
+
+  /* short hand declaration */
+  animation: skyAnimation 10s infinite linear forwards;
 }
 
 .grass {
@@ -66,11 +70,15 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  transition: background-color 300ms ease-in-out;
 
-  animation-name: sunAnimation;
+  /* animation-name: sunAnimation;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  animation-delay: 0;
+  animation-delay: 0; */
+
+  /* short hand declaration */
+  animation: sunAnimation 10s infinite linear forwards;
 }
