@@ -83,11 +83,11 @@ footer {
   }
 
   aside {
-    width: 100px;
+    width: 200px;
   }
 
   nav {
     order: -1;
-    width: 100px;
+    width: 200px;
   }
 }
