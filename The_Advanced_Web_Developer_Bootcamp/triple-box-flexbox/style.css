@@ -1,0 +1,33 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  transition: 100ms background-color ease;
+  background-color: #cc0042;
+  /* flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 1;*/
+  flex: 1 1 200px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 590px)  {
+  .box {
+    font-size: 30px;
+  }
+}
+
+.middle {
+  background-color: #b20039
+}
+
+.box:hover {
+  background-color: #ff0052;
+}
