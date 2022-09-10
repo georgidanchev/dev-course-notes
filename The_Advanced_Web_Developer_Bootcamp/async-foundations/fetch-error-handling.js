@@ -7,7 +7,7 @@ const apiErrorHandler = (request) => {
     throw Error(request.status)
   }
   // Success! All good bruv!
-  return res
+  return request
 }
 
 fetch(url)
