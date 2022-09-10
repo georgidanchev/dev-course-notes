@@ -1,0 +1,43 @@
+body {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px black;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 20px;
+  transition: all 150ms ease;
+}
+
+button:not(:disabled):active {
+  margin-top: 1px;
+  box-shadow: 1px 1px black;
+}
+
+button:disabled {
+  margin-top: 1px;
+  box-shadow: 1px 1px black;
+}
+
+span#price {
+  color: green;
+  display: block;
+}
+
+.title {
+  margin-top: 0;
+}
+
+#price {
+  display: block;
+  font-size: 22px;
+  margin-top: 5px;
+}
