@@ -14,10 +14,11 @@
 - 14hrs - [React Front To Back 2019](https://www.udemy.com/course/modern-react-front-to-back/)
 - 18hrs - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
 - 12hrs - [MERN Stack Front To Back: Full Stack React, Redux & Node.js](https://www.udemy.com/course/mern-stack-front-to-back/)
+- 34hrs - [The Advanced Web Developer Bootcamp](https://www.udemy.com/course/the-advanced-web-developer-bootcamp/) partially done
 
 ## Currently studying
 
-- 34hrs - [The Advanced Web Developer Bootcamp](https://www.udemy.com/course/the-advanced-web-developer-bootcamp/)
+- 47.5Hrs - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 
 ## Awaiting Completion (unordered)
 
@@ -28,7 +29,6 @@
 - 51.5hrs - [The Complete 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - 12hrs - [Node.js API Masterclass With Express & MongoDB](https://www.udemy.com/course/nodejs-api-masterclass/)
 - 46.5hrs - [The Web Developer Bootcamp](https://www.udemy.com/course/the-web-developer-bootcamp/)
-- 47.5Hrs - [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 - 9hrs - [Node.js, Express & MongoDB Dev to Deployment](https://www.udemy.com/course/draft/1358300/)
 - 34.5hrs - [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)
 - 5.5hrs - [Electron From Scratch: Build Desktop Apps With JavaScript](https://www.udemy.com/course/electron-from-scratch/)
