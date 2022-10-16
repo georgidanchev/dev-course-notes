@@ -6,6 +6,7 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("")
   const [enteredAmount, setEnteredAmount] = useState("")
   const [enteredDate, setEnteredDate] = useState("")
+  const [IsFormVisible, setIsFormVisible] = useState(false)
 
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: "",
@@ -39,15 +40,25 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
-      date: new Date(enteredDate)
-    };
+      amount: +enteredAmount,
+      date: new Date(enteredDate),
+    }
 
     props.onSaveExpenseData(expenseData)
 
     setEnteredTitle("")
     setEnteredAmount("")
     setEnteredDate("")
+
+    setIsFormVisible(false)
+  }
+
+  if (IsFormVisible === false) {
+    return (
+      <button type="button" onClick={() => setIsFormVisible(true)}>
+        Add expense
+      </button>
+    )
   }
 
   return (
@@ -81,6 +92,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button">Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
