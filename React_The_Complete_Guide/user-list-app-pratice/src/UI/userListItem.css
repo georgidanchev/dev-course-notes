@@ -1,0 +1,15 @@
+.list-item {
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.list-item__text {
+  margin-top: 0;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.list-item:not(:first-child) {
+  margin-top: 10px;
+}
