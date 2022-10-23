@@ -1,8 +1,12 @@
 import React from "react"
 
+import AddUser from "./comps/Users/AddUsers"
+
 function App() {
   return (
-    <div></div>
+    <div>
+      <AddUser />
+    </div>
   )
 }
 
