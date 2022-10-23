@@ -18,8 +18,16 @@
   padding: 5px 10px;
 }
 
-.btn {
+.inputGroup__submit {
   margin-top: 20px;
+}
+
+.inputGroup.invalid .inputGroup__label {
+  color: red;
+}
+
+.inputGroup.invalid .inputGroup__input {
+  border-color: red;
 }
 
 /* Chrome, Safari, Edge, Opera */

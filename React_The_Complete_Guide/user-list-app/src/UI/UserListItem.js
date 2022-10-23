@@ -1,9 +1,12 @@
 import "./userListItem.css"
 
-const UserListItem = () => {
+const UserListItem = (props) => {
+  // const [name, age] = props.data
+  console.log(props.data)
+
   return (
     <li className="list-item">
-      <p className="list-item__text">list item</p>
+      <p className="list-item__text">{props.data.name} ({props.data.age} years old)</p>
     </li>
   )
 }

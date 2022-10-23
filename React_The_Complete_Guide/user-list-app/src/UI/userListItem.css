@@ -10,6 +10,6 @@
   margin-bottom: 0;
 }
 
-.list-item__text:not(:last-child):not(:first-child) {
-  margin-bottom: 10px;
+.list-item:not(:first-child) {
+  margin-top: 10px;
 }
