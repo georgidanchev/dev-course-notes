@@ -95,7 +95,7 @@ const BasicForm = (props) => {
           onBlur={emailBlurHandler}
         />
 
-        {emailHasError && <p>Please enter a valid email address.</p>}
+        {emailHasError && <p className="error-text">Please enter a valid email address.</p>}
       </div>
 
       <div className="form-actions">
