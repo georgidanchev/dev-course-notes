@@ -1,4 +1,3 @@
-import { getDefaultNormalizer } from "@testing-library/react"
 import { useReducer } from "react"
 
 import CartContext from "./cart-context"
@@ -62,6 +61,13 @@ const cartReducer = (state, action) => {
     }
   }
 
+  if (action.type === "CLEAR") {
+    return {
+      items: [],
+      totalAmount: 0,
+    }
+  }
+
   return defaultCartState
 }
 
@@ -76,11 +82,16 @@ const CartProvider = (props) => {
     dispatchCartAction({ type: "REMOVE", id: id })
   }
 
+  const clearCartHandler = () => {
+    dispatchCartAction({ type: "CLEAR" })
+  }
+
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCarHandler,
+    clearCart: clearCartHandler,
   }
 
   return <CartContext.Provider value={cartContext}>{props.children}</CartContext.Provider>
