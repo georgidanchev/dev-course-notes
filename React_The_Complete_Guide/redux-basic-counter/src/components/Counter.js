@@ -1,7 +1,7 @@
 import React from "react"
 import classes from "./Counter.module.css"
 import { useSelector, useDispatch } from "react-redux"
-import { counterActions } from "../store/index"
+import { counterActions } from "../store/counter"
 
 // Functional component
 
@@ -20,10 +20,6 @@ const Counter = () => {
 
   const decrementHandler = () => {
     dispatch(counterActions.decrement())
-  }
-
-  const decreaseHandler = () => {
-    dispatch(counterActions.increase(-5))
   }
 
   const toggleCounterHandler = () => {
