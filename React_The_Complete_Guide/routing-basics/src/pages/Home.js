@@ -11,7 +11,7 @@ function HomePage() {
       <h1>My home page</h1>
       <p>
         Go to{" "}
-        <Link to="/products">the list of products</Link>.
+        <Link to="products">the list of products</Link>.
       </p>
       <p>
         <button onClick={navigationHandler}>

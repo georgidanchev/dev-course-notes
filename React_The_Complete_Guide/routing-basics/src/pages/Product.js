@@ -16,9 +16,7 @@ function ProductsPage() {
       <ul>
         {DummyProductData.map((prodLink) => (
           <li key={prodLink.id}>
-            <Link to={`/products/${prodLink.id}`}>
-              {prodLink.title}
-            </Link>
+            <Link to={prodLink.id}>{prodLink.title}</Link>
           </li>
         ))}
       </ul>
