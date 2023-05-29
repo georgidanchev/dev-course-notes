@@ -3,8 +3,8 @@ import {
   createBrowserRouter,
 } from "react-router-dom"
 
-import HomePage from "./pages/HomePage"
-import EventsPage from "./pages/EventPage"
+import HomePage from "./pages/Home"
+import EventsPage from "./pages/Events"
 import EventDetail from "./pages/EventDetail"
 import NewEvent from "./pages/NewEvent"
 import EditEvent from "./pages/EditEvent"
@@ -16,17 +16,29 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
-      { index: true, element: <HomePage /> },
+      {
+        index: true,
+        element: <HomePage />,
+      },
       {
         path: "events",
         element: <EventsRootLayout />,
         children: [
-          { index: true, element: <EventsPage /> },
+          {
+            index: true,
+            element: <EventsPage />,
+            loader: () => {
+
+            }
+          },
           {
             path: ":eventId",
             element: <EventDetail />,
           },
-          { path: "new", element: <NewEvent /> },
+          {
+            path: "new",
+            element: <NewEvent />,
+          },
           {
             path: ":eventId/edit",
             element: <EditEvent />,
@@ -38,7 +50,9 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <RouterProvider router={router} />
+  )
 }
 
 export default App
