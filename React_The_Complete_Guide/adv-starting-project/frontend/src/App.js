@@ -15,14 +15,12 @@ import EventsPage, {
 
 import EventDetail, {
   loader as eventDetailLoader,
-  action as deleteEventAction
+  action as deleteEventAction,
 } from "./pages/EventDetail"
 
-import NewEvent, {
-  action as newEventAction,
-} from "./pages/NewEvent"
+import { action as manipulateEventAction } from "./components/EventForm"
 
-
+import NewEventPage from "./pages/NewEvent"
 
 const router = createBrowserRouter([
   {
@@ -51,18 +49,19 @@ const router = createBrowserRouter([
               {
                 index: true,
                 element: <EventDetail />,
-                action: deleteEventAction
+                action: deleteEventAction,
               },
               {
                 path: "edit",
                 element: <EditEvent />,
+                action: manipulateEventAction,
               },
             ],
           },
           {
             path: "new",
-            element: <NewEvent />,
-            action: newEventAction,
+            element: <NewEventPage />,
+            action: manipulateEventAction,
           },
         ],
       },
