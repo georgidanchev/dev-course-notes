@@ -1,4 +1,4 @@
-import classes from './PageContent.module.css';
+import classes from "./PageContent.module.css"
 
 function PageContent({ title, children }) {
   return (
@@ -6,7 +6,7 @@ function PageContent({ title, children }) {
       <h1>{title}</h1>
       {children}
     </div>
-  );
+  )
 }
 
-export default PageContent;
+export default PageContent
