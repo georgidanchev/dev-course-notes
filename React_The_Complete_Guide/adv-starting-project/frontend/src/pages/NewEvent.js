@@ -1,4 +1,3 @@
-
 import EventForm from "../components/EventForm"
 
 function NewEvent() {
@@ -6,4 +5,3 @@ function NewEvent() {
 }
 
 export default NewEvent
-
