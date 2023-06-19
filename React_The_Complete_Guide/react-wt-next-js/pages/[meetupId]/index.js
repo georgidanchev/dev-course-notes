@@ -1,5 +1,56 @@
 import MeetupDetail from "@/components/meetups/MeetupDetail"
+import { MongoClient, ObjectId } from "mongodb"
+import Head from "next/head"
 
-export default function MeetupDetails() {
-  return <MeetupDetail image="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.dumpaday.com%2Fwp-content%2Fuploads%2F2017%2F01%2Frandom-pictures-74.jpg&f=1&nofb=1&ipt=90fbaf93306d2b0a4555b53d2cdf33501b742f5f20a82568bdc198a02b61bdbb&ipo=images" title="First meetup" address="Some address 5, 12345 some city, some-post-code" description="The meetup description" />
+export default function MeetupDetails(props) {
+  return <>
+    <Head>
+      <title>{props.meetupData.title}</title>
+      <meta name="description" content={props.meetupData.description} />
+    </Head>
+    <MeetupDetail image={props.meetupData.image} title={props.meetupData.title} address={props.meetupData.address} description={props.meetupData.description} />
+  </>
+}
+
+export async function getStaticPaths() {
+  const client = await MongoClient.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.9gtzyiz.mongodb.net/meetups?retryWrites=true`)
+
+  const db = client.db()
+
+  const meetupsCollection = db.collection("meetups")
+
+  const meetups = await meetupsCollection.find({}, { _id: 1 }).toArray()
+
+  client.close()
+
+  return {
+    fallback: false,
+    paths: meetups.map((meetup) => ({ params: { meetupId: meetup._id.toString() } })),
+  }
+}
+
+export async function getStaticProps(context) {
+  const meetupId = context.params.meetupId
+
+  const client = await MongoClient.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.9gtzyiz.mongodb.net/meetups?retryWrites=true`)
+
+  const db = client.db()
+
+  const meetupsCollection = db.collection("meetups")
+
+  const selectedMeetup = await meetupsCollection.findOne({ _id: new ObjectId(meetupId) })
+
+  client.close()
+
+  return {
+    props: {
+      meetupData: {
+        id: selectedMeetup._id.toString(),
+        title: selectedMeetup.title,
+        address: selectedMeetup.address,
+        image: selectedMeetup.image,
+        description: selectedMeetup.description
+      },
+    },
+  }
 }
