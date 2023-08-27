@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: 'Lato', serif;
+  font-family: "Lato", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(#222c31, #111d32);
@@ -80,7 +80,7 @@ ul {
 #overview-section p {
   font-size: 1.25rem;
   line-height: 1.5;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.26);
 }
 
@@ -91,7 +91,7 @@ ul {
 
 .content-section h2 {
   font-size: 2rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 2rem auto;
   color: #b6cad5;
 }
@@ -104,7 +104,9 @@ ul {
 }
 
 .event-item {
-  height: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   margin: 2rem 0;
   padding: 0;
   border-radius: 4px;
@@ -134,7 +136,7 @@ ul {
 
 .event-item h2 {
   font-size: 1.15rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   color: #d7bfcb;
 }
@@ -142,13 +144,13 @@ ul {
 .event-item .event-item-date {
   margin: 0.5rem;
   font-size: 0.85rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .event-item .event-item-location {
   margin: 0.5rem;
   font-size: 1rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 #search-form input {
