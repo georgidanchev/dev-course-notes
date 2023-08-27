@@ -97,7 +97,7 @@ export default function EventForm({ inputData, onSubmit, children }) {
         />
       </p>
 
-      <p className="form-actions">{children}</p>
+      <div className="form-actions">{children}</div>
     </form>
   )
 }
