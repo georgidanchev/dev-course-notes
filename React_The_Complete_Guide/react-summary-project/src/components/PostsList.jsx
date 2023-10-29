@@ -1,13 +1,34 @@
+import { useState, useEffect } from "react"
 import classes from "./PostsList.module.css"
+import Modal from "./Modal"
 import NewPost from "./NewPost"
 import Post from "./Post"
-import Modal from "./Modal"
-import { useState } from "react"
 
 function PostsList({ isPosting, onStopPosting }) {
   const [posts, setPosts] = useState([])
 
+  // To avoid infinite loop we have add our fetch code in use-effect hook
+  useEffect(() => {
+    // This hook cannot be async an function
+    async function fetchPosts() {
+      const response = await fetch("http://localhost:8080/posts")
+      const resData = await response.json()
+      setPosts(resData.posts)
+    }
+
+    // So we wrap our code in another function to make it async
+    fetchPosts()
+  }, [])
+
   function addPostHandler(postData) {
+    fetch("http://localhost:8080/posts", {
+      method: "POST",
+      body: JSON.stringify(postData),
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+
     setPosts((existingPosts) => [postData, ...existingPosts])
   }
 
