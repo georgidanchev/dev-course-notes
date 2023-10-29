@@ -1,39 +1,25 @@
-import { useState } from "react"
 import classes from "./PostsList.module.css"
 import NewPost from "./NewPost"
 import Post from "./Post"
 import Modal from "./Modal"
+import { useState } from "react"
 
-function PostsList() {
-  const [modalIsVisible, setModalIsVisible] = useState(true)
-  const [enteredBody, setEnteredBody] = useState("")
-  const [enteredName, setEnteredName] = useState("")
+function PostsList({ isPosting, onStopPosting }) {
+  const [posts, setPosts] = useState([])
 
-  function hideModalHandler() {
-    setModalIsVisible(false)
-  }
-
-  function bodyChangeHandler(event) {
-    setEnteredBody(event.target.value)
-  }
-
-  function nameChangeHandler(event) {
-    setEnteredName(event.target.value)
+  function addPostHandler(postData) {
+    setPosts((existingPosts) => [postData, ...existingPosts])
   }
 
   return (
     <>
-      {modalIsVisible && (
-        <Modal onClose={hideModalHandler}>
-          <NewPost
-            onBodyChange={bodyChangeHandler}
-            onNameChange={nameChangeHandler}
-          />
+      {isPosting && (
+        <Modal onClose={onStopPosting}>
+          <NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
         </Modal>
       )}
 
       <ul className={classes.posts}>
-        <Post author="Maximilian" body="React.js is awesome!" />
         <Post author="Manuel" body="Check out the full course!" />
       </ul>
     </>
