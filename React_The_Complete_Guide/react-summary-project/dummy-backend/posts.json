@@ -1,5 +1,6 @@
 {
   "posts": [
+    { "body": "Lorem ipsum", "author": "John Doe", "id": "0.7813746617812478" },
     {
       "body": "This course is hopefully very helpful to you!",
       "author": "Maximilian",
