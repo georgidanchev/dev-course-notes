@@ -1,8 +1,6 @@
 import classes from "./Post.module.css"
 
-function Post(props) {
-  const { author, body } = props
-
+function Post({ author, body }) {
   return (
     <li className={classes.post}>
       <p className={classes.author}>{author}</p>
