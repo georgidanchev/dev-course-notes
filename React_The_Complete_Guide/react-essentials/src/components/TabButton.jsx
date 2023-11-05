@@ -3,8 +3,8 @@ export default function TabButton({ onSelect, value, isSelected }) {
     <li>
       <button
         className={isSelected ? "active" : ""}
-        type="button"
         onClick={() => onSelect(value)}
+        type="button"
       >
         {value}
       </button>
