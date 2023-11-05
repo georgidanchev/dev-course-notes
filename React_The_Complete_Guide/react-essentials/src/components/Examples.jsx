@@ -2,6 +2,7 @@ import { useState } from "react"
 import { CORE_CONCEPTS, EXAMPLES } from "../data"
 import TabButton from "./TabButton"
 import Section from "./Section"
+import Tabs from "./tabs"
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState()
@@ -24,8 +25,8 @@ export default function Examples() {
 
   return (
     <Section id="examples" title="Examples">
-      <menu>
-        {CORE_CONCEPTS.map((conceptItem) => (
+      <Tabs
+        buttons={CORE_CONCEPTS.map((conceptItem) => (
           <TabButton
             key={`${conceptItem.title} + "2"`}
             isSelected={selectedTopic === conceptItem.title}
@@ -33,9 +34,9 @@ export default function Examples() {
             value={conceptItem.title}
           />
         ))}
-      </menu>
-
-      {tabContent}
+      >
+        {tabContent}
+      </Tabs>
     </Section>
   )
 }

@@ -76,7 +76,7 @@ main h2 {
   text-align: left;
 }
 
-#examples menu {
+#examples ul {
   margin: 1rem 0;
   padding: 0;
   display: flex;
@@ -84,7 +84,7 @@ main h2 {
   list-style: none;
 }
 
-#examples menu button {
+#examples ul button {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
@@ -96,12 +96,12 @@ main h2 {
   transition: all 0.2s ease-in-out;
 }
 
-#examples menu button:hover {
+#examples ul button:hover {
   background-color: #1b082f;
   color: #ebe7ef;
 }
 
-#examples menu button.active {
+#examples ul button.active {
   background-color: #7925d3;
   color: #ebe7ef;
 }
