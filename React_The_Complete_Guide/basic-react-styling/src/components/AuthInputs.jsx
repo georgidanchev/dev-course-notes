@@ -1,6 +1,7 @@
 import { useState } from "react"
-import { Button, ControlContainer } from "./StyledComps"
-import InputGroup from "./InputGroup"
+import { ControlContainer } from "./StyledComps"
+import InputGroup from "./StyledInputGroup"
+import Button from "./Button"
 
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState("")
@@ -56,10 +57,8 @@ export default function AuthInputs() {
       </ControlContainer>
 
       <div className="actions">
-        <Button type="button" className="text-button">
-          Create a new account
-        </Button>
-        <Button type="button" className="button" onClick={handleLogin}>
+        <Button type="button">Create a new account</Button>
+        <Button type="button" onClick={handleLogin}>
           Sign In
         </Button>
       </div>
