@@ -4,6 +4,7 @@ const ResultModal = forwardRef(function ResultModal({ targetTime, remainingTime,
   const dialog = useRef()
   const userLost = remainingTime <= 0
   const formattedRemainingTime = (remainingTime / 1000).toFixed(2)
+  const score = Math.round((1 - remainingTime / (targetTime * 1000)) * 100)
 
   useImperativeHandle(ref, () => {
     return {
@@ -16,7 +17,9 @@ const ResultModal = forwardRef(function ResultModal({ targetTime, remainingTime,
 
   return (
     <dialog ref={dialog} className="result-modal">
-      <h2>You {userLost ? "lost" : "won"}</h2>
+      {!userLost && <h2>Your Score: {score}</h2>}
+
+      {userLost && <h2>You lost</h2>}
 
       <p>
         The target times was <strong>{targetTime} seconds.</strong>
