@@ -19,32 +19,35 @@ function App() {
   }
 
   function handleAddProject(projectData) {
-    setProjectsState(prevState => {
+    setProjectsState((prevState) => {
+      const projectId = Math.random()
+
       const newProject = {
         ...projectData,
-        id: Math.random()
+        id: projectId,
       }
 
       return {
         ...prevState,
-        projects: [...prevState.projects, newProject]
+        selectedProjectId: undefined,
+        projects: [...prevState.projects, newProject],
       }
     })
   }
 
-  console.log(projectsState);
+  console.log(projectsState)
 
   let content
 
   if (projectsState.selectedProjectId === null) {
-    content = <NewProject onAdd={handleAddProject}/>
+    content = <NewProject onAdd={handleAddProject} />
   } else if (projectsState.selectedProjectId === undefined) {
     content = <NoProjectSelected onStartAddProject={handleStartAddProject} />
   }
 
   return (
     <main className="h-screen my-8 flex gap-8">
-      <ProjectsSideBar onStartAddProject={handleStartAddProject} />
+      <ProjectsSideBar onStartAddProject={handleStartAddProject} projects={projectsState.projects} />
       {content}
     </main>
   )
