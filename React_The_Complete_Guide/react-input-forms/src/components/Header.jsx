@@ -1,4 +1,4 @@
-import logoImg from '../assets/logo.jpg';
+import logoImg from "../assets/logo.jpg"
 
 export default function Header() {
   return (
@@ -6,5 +6,5 @@ export default function Header() {
       <img src={logoImg} alt="A form and a pencil" />
       <h1>React Forms</h1>
     </header>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import Header from './components/Header.jsx';
-import Login from './components/Login.jsx';
+import Header from "./components/Header.jsx"
+import Login from "./components/Login.jsx"
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Login />
       </main>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

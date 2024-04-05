@@ -20,5 +20,5 @@ export default function Login() {
         <button className="button">Login</button>
       </p>
     </form>
-  );
+  )
 }
