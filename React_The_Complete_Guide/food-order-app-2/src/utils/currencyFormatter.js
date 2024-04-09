@@ -1,7 +1,7 @@
 const currencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "GBP",
-  minimumFractionDigits: 0,
+  minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 })
 
