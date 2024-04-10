@@ -45,7 +45,7 @@ function cartReducer(state, action) {
       updatedItems[existingCartItemIndex] = updatedItem
     }
 
-    return { ...state, item: updatedItems }
+    return { ...state, items: updatedItems }
   }
 
   return state
