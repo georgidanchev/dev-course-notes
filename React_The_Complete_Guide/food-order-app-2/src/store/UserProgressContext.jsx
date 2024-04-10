@@ -32,6 +32,7 @@ export function UserProgressContextProvider({ children }) {
     showCart,
     hideCart,
     showCheckout,
+    hideCheckout,
   }
 
   return <UserProgressContext.Provider value={userProgressCtx}>{children}</UserProgressContext.Provider>
