@@ -1,8 +1,9 @@
-import Cart from "./Components/Cart"
-import Header from "./Components/Header"
-import Meals from "./Components/Meals"
 import { CartContextProviders } from "./store/CartContext"
 import { UserProgressContextProvider } from "./store/UserProgressContext"
+import Cart from "./Components/Cart"
+import Checkout from "./Components/Checkout"
+import Header from "./Components/Header"
+import Meals from "./Components/Meals"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Header />
         <Meals />
         <Cart />
+        <Checkout />
       </CartContextProviders>
     </UserProgressContextProvider>
   )
